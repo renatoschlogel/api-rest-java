@@ -28,7 +28,7 @@ public class ProdutoResource {
 		return produtoRepository.findAll();
 	}
 	
-	@GetMapping("/produto/{id}")
+	@GetMapping("/produtos/{id}")
 	public Produto buscarProduto(@PathVariable(value="id") Long id){
 		Optional<Produto> optionalProduto = produtoRepository.findById(id);
 		if(optionalProduto.isPresent()) {
@@ -38,7 +38,7 @@ public class ProdutoResource {
 		return null;
 	}
 	
-	@PostMapping("/produto")
+	@PostMapping("/produtos")
 	public Produto salvar(@RequestBody Produto produto) {
 		return produtoRepository.save(produto);
 	}

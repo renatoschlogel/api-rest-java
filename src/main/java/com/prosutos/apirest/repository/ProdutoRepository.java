@@ -6,6 +6,5 @@ import com.prosutos.apirest.models.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long>  {
 	
-	
 
 }
